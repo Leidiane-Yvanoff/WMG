@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="general.html :: head"></head>
+
+<body style="background-color: #24BAC7">
+<header th:replace="general.html :: top"></header>
+	<div class="container">
+		<div class="row">
+			<div class="col ">
+	<h1>Vos cadeaux</h1>
+	
+    <form action="#" th:action="@{/gifts/list}" th:object="${gift}" method="post">
+    	<p th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}" />
+    	<label for="nom">Nom du cadeau : </label> <input id="nom" type="text" th:field="*{nom}" /><br>
+    	
+        <p th:if="${#fields.hasErrors('lien')}" th:errors="*{lien}" />
+        <label for="content">Adresse ou page web: </label><input id="content" type="url" th:field="*{lien}" /><br>
+         <p><input class="btn btn-dark mt-4" type="submit" value="Ajouter" /> <input class="btn btn-dark mt-4" type="reset" value="Effacer" /></p>
+    </form>
+    </div>
+    </div>
+    </div>
+    <section th:replace="general.html :: foot"></section>
+    
+</body>
+</html>

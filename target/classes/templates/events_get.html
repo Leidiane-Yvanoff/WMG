@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="general.html :: head"></head>
+
+<body style="background-color: #24BAC7">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center ">
+				<a th:href="@{/}"><img src="/img/logo.svg"
+					alt="logo wish me gifts"></a>
+					
+					
+			</div>
+		</div>
+	</div>
+	<img style="height: 600px; width: 100%; display: block;"
+		th:src="@{/img/cado-unsplash.jpg}" class="mt-0">
+			<div class="container mt-5">
+		<div class="row">
+			<div class="col-12 text-center lead">
+				<div class="jumbotron">
+					<h1 th:text="| ${event.intitule}|">$intitule</h1>
+					<h2 th:text="| ${event.adresse}|">$adresse</h2>
+					<p th:text="|${event.message}|">$message</p>
+					<p
+						th:text="|Date de l'évenement: ${#dates.format(event.dateEvent,'dd/MM/yyyy')}|">$dateEvent</p>
+					<p th:text="| ${event.occasion}|">$occasion</p>
+					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<form action="/events/list" method="post" class="m-auto">
+	<div class="container">
+			<div class="row ">
+				<div class="col-12 col-md-4 form-group mt-4">
+					<label for="gift-nom">Nom du cadeau </label> <input
+						id="gift-nom" name="nom" type="text"
+						class="form-control">
+				</div>
+</div>
+</div>
+
+</form>	
+
+
+</body>
+</html>

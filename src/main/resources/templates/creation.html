@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="general.html :: head"></head>
+
+<body style="background-color: #24BAC7">
+	<header th:replace="general.html :: top"></header>
+
+	<div class="container">
+		<div class="form-group row">
+			<div class="col-md-12  text-center my-4">
+				<img src="img/cadeau.svg" alt="image cadeau">
+				<h2 class="text-white mt-4">Créer votre liste</h2>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<form action="/events/list" method="post" class="m-auto">
+
+		<fieldset>
+			<legend class="text-center mt-4">Événement </legend>
+			<div class="container my-4 ">
+				<div class="row ml-5">
+
+					<div class="col-6 col-lg-2 ">
+						<input type="radio" name="occasion" value="Naissance"> <label
+							for="event-occasion">Naissance</label>
+					</div>
+
+					<div class="col-6 col-lg-2 ">
+						<input type="radio" name="occasion" value="Noël"> <label
+							for="event-occasion">Noël</label>
+					</div>
+
+					<div class="col-6 col-lg-2 ">
+						<input type="radio" name="occasion" value="Anniversaire">
+						<label for="event-occasion">Anniversaire</label>
+					</div>
+					<div class="col-6 col-lg-2 ">
+						<input type="radio" name="occasion" value="Mariage"> <label
+							for="event-occasion">Mariage</label>
+					</div>
+
+					<div class="col-6 col-lg-2 ">
+						<input type="radio" name="occasion" value="Bapteme"> <label
+							for="event-occasion">Baptême</label>
+					</div>
+					<div class="col-6 col-lg-2 ">
+						<input type="radio" name="occasion" value="Autres" checked>
+						<label for="event-occasion">Autres</label>
+					</div>
+
+				</div>
+			</div>
+			<hr>
+		</fieldset>
+		<div class="container">
+			<div class="row ">
+
+
+				<div class="col-12 col-md-4 form-group mt-4">
+					<label for="event-intitule">Intitulé de votre liste </label> <input
+						id="event-intitule" name="intitule" type="text"
+						class="form-control">
+				</div>
+				<div class="col-12 col-md-4 form-group mt-4">
+					<label for="event-dateEvent">Date (événement) </label> <input
+						id="event-dateEvent" name="dateEvent" type="date"
+						class="form-control"
+						placeholder="Merci de saisir la date de votre événement">
+				</div>
+				<div class="col-12 col-md-4 form-group mt-4">
+					<label for="event-adresse">Adresse pour la livraison </label> <input
+						id="event-adresse" name="adresse" type="text"
+						class="form-control">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col form-group m-auto">
+					<label for="event-message">Votre message de bienvenue </label>
+					<textarea id="event-message" name="message"
+						class="form-control mb-4" rows="5"></textarea>
+				</div>
+			</div>
+		</div>
+	    		<div class="col-12 text-center">
+			<button type="submit" class="btn btn-dark mt-4">Créer</button>
+		</div>
+	
+</form>
+
+
+	<section th:replace="general.html :: foot">Footer</section>
+</body>
+</html>

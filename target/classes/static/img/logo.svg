@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="32" viewBox="0 0 154 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fcf5f5;
+        font-size: 24px;
+        font-family: Chalkboard-Bold, Chalkboard;
+        font-weight: 700;
+        letter-spacing: 0.052em;
+      }
+
+      .cls-2 {
+        fill: #0f0e0e;
+      }
+    </style>
+  </defs>
+  <text id="WishMEgifts" class="cls-1" transform="translate(0 24)"><tspan x="0" y="0">Wish</tspan><tspan class="cls-2" y="0">ME</tspan><tspan y="0">gifts</tspan></text>
+</svg>

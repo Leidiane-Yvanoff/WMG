@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="general.html :: head"></head>
+
+<body style="background-color: #24BAC7">
+<header th:replace="general.html :: top"></header>
+	<div class="container">
+		<div class="row">
+			<div class="col ">
+
+	<h1 th:text="${gift.nom} "></h1>
+    <p th:text="${gift.lien}"><p/>
+    <a class="btn btn-dark mt-4" href="/gifts/list">Ajouter un cadeau</a>
+    
+    </div>
+    </div>
+    </div>
+    <section th:replace="general.html :: foot"></section>
+</body>
+</html>
